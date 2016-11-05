@@ -1,42 +1,19 @@
 'use strict';
 
-/*
- * Dependencies.
- */
+/* Dependencies. */
+var direction = require('direction');
 
-var direction = require('wooorm/direction@0.1.5');
-
-/*
- * DOM elements.
- */
-
+/* Nodes. */
 var $input = document.getElementsByTagName('textarea')[0];
 var $output = document.getElementsByTagName('output')[0];
 
-/*
- * Helper.
- */
-
-function sum(a, b) {
-    return a + b;
-}
-
-/*
- * Handler.
- */
-
-function oninputchange() {
-    $output.textContent = direction($input.value);
-}
-
-/*
- * Attach handler.
- */
-
+/* Listen. */
 $input.addEventListener('input', oninputchange);
 
-/*
- * Initial answer.
- */
-
+/* Initial answer. */
 oninputchange();
+
+/* Calculate. */
+function oninputchange() {
+  $output.textContent = direction($input.value);
+}
