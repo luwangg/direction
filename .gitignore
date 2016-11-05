@@ -1,6 +1,7 @@
 .DS_Store
-build/
-bower_components/
-components/
+*.log
+.nyc_output/
 coverage/
 node_modules/
+direction.js
+direction.min.js
